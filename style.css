@@ -2,16 +2,35 @@
     box-sizing: border-box;
 }
 
+
+.sidebar-img {
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    filter: grayscale(100%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: filter 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sidebar-img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
 body {
     margin: 0;
     background: #14011b;
-    color: #ce80e6b2;
+    color: #ce80e6a6;
     font-family: "Luminari", fantasy;
 }
 
 #all-contents{
     max-width:1500px;
-    min-height:100vh;
+    min-height:1000vh;
     margin:0 auto;
     padding:32px 40px;
 }
@@ -34,8 +53,12 @@ minmax(420px, 1.6fr);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 5px;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
 }
+
+
 
 #interests {
     margin-top:32px;
@@ -44,11 +67,11 @@ minmax(420px, 1.6fr);
 
 #interests h3 {
     margin: 0 0 12px;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color:#aaa;
+    letter-spacing: 0.1em;
+    color:#e6eceaa0;
 }
 
 #interests ul{
@@ -61,21 +84,66 @@ minmax(420px, 1.6fr);
 }
 
 #interests li{
-    color: #555;
+    color: #282228;
     font-size: 1rem;
     font-weight: 600;
     padding: 10px 20px;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #c696c9d8;
+    border: 1px solid #000000;
     border-radius: 100px; 
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
     cursor: default;
 }
 
 #interests li:hover {
-    background: #000;
-    color: #fff;
+    background: #3b004b;
+    color: #f5b7ff;
     border-color: #000;
     transform:
     translateY(-2px);
+}
+
+nav{
+    display: flex;
+    justify-content: space-betwen;
+    align-items: center;
+    margin-bottom: 48px;
+    padding: 16px 24px;
+    background: #c696c9d8;
+    border: 1px solid #000000;
+    border-radius: 12px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #282228;
+}
+
+#nav-ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nav-li a {
+    color: #282228;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-li a:hover {
+    background: #3b004b;
+    color: #f5b7ff;
 }
