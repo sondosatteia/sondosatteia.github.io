@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 .sidebar-img {
     width: 100%;
     max-width: 760px;
@@ -20,6 +19,25 @@
     transform: translateY(-4px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
+
+.portpic-img {
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    filter: grayscale(100%);
+    box-shadow: 0 8px 30px rgba(255, 221, 108, 0.705);
+    transition: filter 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portpic-img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
 
 body {
     margin: 0;
