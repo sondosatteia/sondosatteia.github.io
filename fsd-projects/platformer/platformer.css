@@ -3,7 +3,8 @@ body {
 }
 
 canvas {
-  background-color: rgb(55, 28, 66);
+  
+  background-image: url('https://i.pinimg.com/originals/9f/0d/ae/9f0dae7c8678a5b18b8bbfbf924d8392.gif');
   margin: 20px;
 }
 
