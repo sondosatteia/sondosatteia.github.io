@@ -111,7 +111,7 @@ var Gamification = (function () {
 
   // Create player 1 (always green, uses WASD)
   function createPlayer1() {
-    player1 = draw.randomCircleInArea(canvas, true, true, "#00FF00", 3);
+    player1 = draw.randomCircleInArea(canvas, true, true, "#a642e9", 3);
     player1.radius = 15;
     player1.scaleX = player1.scaleY = 1.5;
 
@@ -133,7 +133,7 @@ var Gamification = (function () {
     view.addChild(player1);
 
     // Add tooltip to identify player 1
-    addPlayerTooltip(player1, "P1", "#00FF00");
+    addPlayerTooltip(player1, "P1", "#ac59d3");
 
     // Add temporary pointer
     addTemporaryPointer(player1);
@@ -146,7 +146,7 @@ var Gamification = (function () {
   // Create player 2 (always blue, uses arrow keys)
   function createPlayer2() {
     // Create player2 using the same method as player1 but with blue color
-    player2 = draw.randomCircleInArea(canvas, true, true, "#0080FF", 3);
+    player2 = draw.randomCircleInArea(canvas, true, true, "#9c4bd6", 3);
     player2.radius = 15;
     player2.scaleX = player2.scaleY = 1.5;
 
@@ -332,16 +332,16 @@ var Gamification = (function () {
 
     // Check for WASD key presses
     if (keys["w"]) {
-      player1.y -= 3;
+      player1.y -= 1;
     }
     if (keys["s"]) {
-      player1.y += 3;
+      player1.y += 1;
     }
     if (keys["a"]) {
-      player1.x -= 3;
+      player1.x -= 1;
     }
     if (keys["d"]) {
-      player1.x += 3;
+      player1.x += 1;
     }
 
     // Keep player in bounds (wrap around screen)
@@ -354,16 +354,16 @@ var Gamification = (function () {
 
     // Check for Arrow key presses
     if (keys["arrowup"]) {
-      player2.y -= 3;
+      player2.y -= 1;
     }
     if (keys["arrowdown"]) {
-      player2.y += 3;
+      player2.y += 1;
     }
     if (keys["arrowleft"]) {
-      player2.x -= 3;
+      player2.x -= 1;
     }
     if (keys["arrowright"]) {
-      player2.x += 3;
+      player2.x += 1;
     }
 
     // Keep player in bounds (wrap around screen)
