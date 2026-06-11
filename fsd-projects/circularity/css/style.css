@@ -15,6 +15,10 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+#canvas{
+    background-image: url('https://i.pinimg.com/originals/8a/cf/f8/8acff8e587df623ec95f8313f9a88ae9.gif');
+}
+
 .game-mode-btn.selected {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgb(83, 0, 130);

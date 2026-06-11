@@ -921,7 +921,7 @@ function showCountdown(callback) {
   
   var countdownDiv = document.createElement("div");
   countdownDiv.id = "countdown";
-  countdownDiv.style.cssText = "font-size: 48px; color: #FFD700; text-align: center;";
+  countdownDiv.style.cssText = "font-size: 48px; color: #ba48f4; text-align: center;";
 
   if(gameModeDiv) gameModeDiv.style.display = 'none';
   instructions.style.display = 'block';
@@ -956,12 +956,12 @@ function showCountdown(callback) {
       instructions.innerHTML = `
                   <h2 style="margin: 0 0 10px 0; color: #0080FF;"> Local Multiplayer Ready!</h2>
                   <div style="margin: 20px 0;">
-                      <p style="margin: 10px 0; color: #FFD700; font-size: 18px; font-weight: bold;"> Two-Player Mode Activated!</p>
-                      <p style="margin: 5px 0; color: #00FF00; font-size: 16px;"> Player 1: GREEN circle (WASD keys)</p>
+                      <p style="margin: 10px 0; color: #a200ff; font-size: 18px; font-weight: bold;"> Two-Player Mode Activated!</p>
+                      <p style="margin: 5px 0; color: #ab57d5; font-size: 16px;"> Player 1: PURPLE circle (WASD keys)</p>
                       <p style="margin: 5px 0; color: #0080FF; font-size: 16px;"> Player 2: BLUE circle (Arrow keys)</p>
                       <p style="margin: 5px 0;">Absorb circles and each other to grow!</p>
                       <p style="margin: 5px 0;">Biggest circle after 60 seconds wins!</p>
-                      <p style="margin: 15px 0 5px 0; color: #FFD700;"><strong>Press any key to start!</strong></p>
+                      <p style="margin: 15px 0 5px 0; color: #9a1eff;"><strong>Press any key to start!</strong></p>
                   </div>
               `;
 
@@ -982,7 +982,7 @@ function showCountdown(callback) {
     var statusDiv = document.createElement("div");
     statusDiv.id = "multiplayerStatus";
     var roleText = Multiplayer.isHost ? "HOST" : "GUEST";
-    var roleColor = Multiplayer.isHost ? "#00FF00" : "#0080FF";
+    var roleColor = Multiplayer.isHost ? "#bc58ff" : "#0080FF";
 
     statusDiv.style.cssText = `
               position: absolute;
@@ -1002,7 +1002,7 @@ function showCountdown(callback) {
 
     statusDiv.innerHTML = `
               <div style="color: ${roleColor};"> MULTIPLAYER</div>
-              <div style="color: #FFD700; font-size: 12px;">${roleText} • Connected</div>
+              <div style="color: #a948f3; font-size: 12px;">${roleText} • Connected</div>
           `;
 
     // Add to the canvas container
