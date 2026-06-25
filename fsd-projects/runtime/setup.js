@@ -1,9 +1,9 @@
 // === STUDENT SETTINGS ===
 // You can change these colors:
 const THEME = {
-  upperBackground: "midnightblue",
-  ground: "slategrey",
-  lowerBackground: "darkgreen",
+  upperBackground: "black",
+  ground: "black",
+  lowerBackground: "black",
 };
 
 // These control the ground position and height:
