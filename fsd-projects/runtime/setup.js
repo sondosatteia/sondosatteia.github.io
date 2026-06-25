@@ -2,7 +2,7 @@
 // You can change these colors:
 const THEME = {
   upperBackground: "black",
-  ground: "black",
+  ground: "grey",
   lowerBackground: "black",
 };
 

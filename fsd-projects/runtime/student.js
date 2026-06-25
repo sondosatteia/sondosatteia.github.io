@@ -55,22 +55,63 @@ function create(obj) {
 
 function filterObjects(type) {
   // TODO 5: Return only the game objects of the specified type
- 
+var filteredObjects = [];
+
+  for (var i = 0; i < gameObjects.length; i++) {
+    var currentObject = gameObjects[i];
+
+    if (currentObject.type === type) {
+      filteredObjects.push(currentObject);
+    }
+  }
+
+  return filteredObjects;
+  console.log(filteredObjects);
+
 }
 
 function moveGameObjects(objectList) {
   // TODO 6: Move all game objects of a single type based on speeds
-
+for (var i = 0; i < objectList.length; i++){
+  var currentObject = objectList[i]
+  currentObject.x += currentObject.speedX - currentLevel.speed;
+}
 }
 
 function handleProjectileCollisions() {
   // TODO 8: Handle collisions between projectiles and enemies
+  for (var i = 0; i < gameObjects.length; i++){
+var currentObject = gameObjects[i];
+
+for (var j = 0; j < projectiles.length; j++){
+
+var currentProjectile = projectiles[j];
+
+if (isCollidingWithProjectile(currentProjectile, currentObject) === true){
+  handleProjectileObjectCollision(i, j);
+}
+  }
+  }
 }
 
 function handleHallebotGenericCollisions() {
   // TODO 9: Handle collisions between Hallebot and game objects
+  for (var i = 0; i < gameObjects.length; i++){
+    var currentObject = gameObjects[i];
+    if (currentObject.type !== "platform") {
+      if (isGenericCollision(currentObject) === true){
+        handleHallebotGenericCollisions(i);
+      }
+    }
+  }
 }
 
 function triggerLevelTransition() {
   // TODO 10: Transition to the next level or show win screen
+  currentLevelIndex += 1;
+  currentLevel = levels[currentLevelIndex];
+  gameObjects = [];
+  if (currentLevelIndex >= levels.length){
+    player.winConditionMet = true;
+  }
 }
